@@ -198,3 +198,308 @@ límites del contenedor */
 }
 
 /* Fin de estilos generales */
+
+/* Header */
+
+header {
+  width: 100%;
+  background-color: var(--light-three);
+  overflow: hidden;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.logo a {
+  color: var(--dark-one);
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.links ul {
+  display: flex;
+}
+
+.links a {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  color: var(--dark-one);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.links a:hover{
+  color: var(--main-color);
+}
+
+.links a.active {
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.9rem 2.1rem;
+  margin-left: 1rem;
+}
+
+.links a.active:hover {
+  color: var(--light-one);
+  background-color: var(--secondary-color);
+}
+
+.hamburguer-menu {
+  display: none;
+}
+
+.header-content .container .grid-2 {
+  grid-template-columns: 2.5fr 3.5fr;
+  min-height: calc(100vh - 6rem);
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.header-title {
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color: var(--dark-one);
+}
+
+.header-title span {
+  color: var(--main-color);
+}
+
+.header-content .text {
+  margin: 2.15rem 0;
+}
+
+.header-content .image {
+  max-width: 750px;
+}
+
+header .points2 { 
+  width: 70%;
+  top: 10%;
+  background-color: var(--secondary-color);
+}
+
+/* Fin header */
+
+/* Servicios */
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-wrap {
+  position: relative;
+  margin: 1.7rem 0.8rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  min-height: 520px;
+  background-color: var(--light-three);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:before {
+  content: attr(data-card);
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0.065;
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+.card-wrap:hover .card {
+  transform: translateY(-15px);
+}
+
+.card-wrap:hover .card:after {
+  height: 8px;
+}
+
+.icon {
+  width: 90px;
+  margin-bottom: 1.7rem;
+}
+
+.card .title-sm {
+  line-height: 0.8;
+}
+
+.card .text {
+  font-size: 1.15rem;
+  margin: 1.8rem 0;
+}
+
+/* Fin servicios */
+
+/* Productos */
+
+.category-with-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px; /* Espaciado entre botones */
+}
+
+.category-btn {
+  border: none;
+  background: none;
+}
+
+.category-icon {
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: 100%;
+  margin: 0%;
+  margin-bottom: 0px; /* Espaciado por debajo de la imagen */
+}
+
+.category-name {
+  font-size: 2rem; /* Ajusta el tamaño del texto según sea necesario */
+  color: var(--dark-one);
+}
+
+.product-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.category-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.product-category {
+  display: none;
+}
+
+.product-category.active {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--light-three);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark-one);
+}
+
+.product-description {
+  font-size: 1rem;
+  color: var(--dark-two);
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.product-card .btn {
+  background-color: var(--main-color);
+  color: var(--light-one);
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.product-card .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Fin productos */
