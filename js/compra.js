@@ -1,16 +1,16 @@
 // compra.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtén todos los botones de categoría
+    //Botones de categoría
     const categoryButtons = document.querySelectorAll('.category-btn');
   
-    // Obtén todos los contenedores de categoría
+    //contenedores de categoría
     const productCategories = document.querySelectorAll('.product-category');
   
-    // Agrega un manejador de eventos a cada botón de categoría
+    //manejador de eventos a cada botón de categoría
     categoryButtons.forEach(function (button) {
       button.addEventListener('click', function () {
-        // Oculta todos los contenedores de categoría
+        // Oculta contenedores de categoría
         productCategories.forEach(function (category) {
           category.style.display = 'none';
         });
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   
-    // Obtén todos los botones de compra
+    // Obtiene todos los botones de compra
     const buyButtons = document.querySelectorAll('.btn.small');
   
     // Agrega un manejador de eventos a cada botón de compra
@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       button.addEventListener('click', function (event) {
         event.preventDefault();
   
-        // Puedes realizar acciones adicionales aquí, como agregar productos al carrito,
-        // mostrar un mensaje de éxito, etc.
+        // mostrar un mensaje de éxito.
         alert('¡Producto agregado al carrito!');
       });
     });
